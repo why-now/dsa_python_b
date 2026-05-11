@@ -3,6 +3,8 @@
 def create_set():
     """Create a simple set"""
     numbers = {1, 2, 3, 4, 5}
+    num = set()
+    print(type(num))
     print("Created set:", numbers)
 
 

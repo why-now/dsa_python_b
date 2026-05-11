@@ -19,7 +19,7 @@ def access_values():
     }
 
     print("Name:", student["name"])
-    print("Age:", student.get("age"))  # safer method
+    print("Name:", student.get("name"))  # safer method
 
 
 def modify_values():
@@ -134,6 +134,7 @@ def nested_dictionary():
 
     print("Nested dictionary:", students)
     print("Access nested value:", students["student1"]["name"])
+    print("Access nested value:", students["student2"]["name"])
 
 
 def main():

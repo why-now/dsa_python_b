@@ -23,6 +23,7 @@ def tuple_length():
 def single_element_tuple():
     """Create a tuple with one element"""
     single = (5,)  # NOTE the comma!
+    print(type(single))
     print("Single element tuple:", single)
 
 
@@ -55,23 +56,25 @@ def count_and_index():
     """Use count() and index()"""
     numbers = (1, 2, 2, 3, 4)
 
-    print("Count of 2:", numbers.count(2))
-    print("Index of 3:", numbers.index(3))
+    print("Count of 2:", numbers.count(2)) # count
+    print("Index of 3:", numbers.index(3)) #return the index
 
 
 def convert_tuple_list():
     """Convert between tuple and list"""
     numbers = (1, 2, 3)
 
-    numbers_list = list(numbers)
+    numbers_list = list(numbers) # typecast tuple to list
     print("Tuple to list:", numbers_list)
 
-    numbers_list.append(4)
+    numbers_list.append(4) # modify
 
-    numbers_tuple = tuple(numbers_list)
+    numbers_tuple = tuple(numbers_list) # list to tuple
     print("List back to tuple:", numbers_tuple)
 
-
+    # num = int(input("Enter a number"))
+    # num = input("Enter a number")
+    
 def unpack_tuple():
     """Unpack tuple into variables"""
     person = ("Kelvin", 20, "Kenya")
@@ -84,7 +87,9 @@ def unpack_tuple():
 
 def nested_tuple():
     """Example of nested tuple"""
-    nested = ((1, 2), (3, 4), (5, 6))
+    nested = ((1, 2), 
+              (3, 4), 
+              (5, 6))
 
     print("Nested tuple:", nested)
     print("Access inner element:", nested[1][0])  # 3
