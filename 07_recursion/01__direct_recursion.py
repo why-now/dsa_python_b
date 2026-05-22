@@ -1,13 +1,8 @@
-import random
-
-def basic(n):
-
-    if n == 0:
+def direct_recursion(n):
+    if n < 1:
         return n
-
-    basic(n-1)
+    
     print(n)
+    return direct_recursion(n - 1)
 
-num = random.randint(1, 10)
-print(f"The number is {num}")
-basic(num)
+direct_recursion(5) # start the program

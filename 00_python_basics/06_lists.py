@@ -94,8 +94,8 @@ def sort_list():
 
 
 def main():
-    # print("\n--- CREATE LIST ---")
-    # create_list()
+    print("\n--- CREATE LIST ---")
+    create_list()
 
     # print("\n--- ACCESS ELEMENTS ---")
     # access_elements()

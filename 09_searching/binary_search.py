@@ -1,18 +1,27 @@
-# Binary Search
+import random
 
-def binary_search(arr, target):
-    low, high = 0, len(arr) - 1
+def binary_search(values, target):
+    low = 0
+    high = len(values) - 1
 
     while low <= high:
         mid = (low + high) // 2
 
-        if arr[mid] == target:
+        if values[mid] == target:
             return mid
-        elif arr[mid] < target:
+        elif values[mid] < target:
             low = mid + 1
         else:
             high = mid - 1
 
     return -1
 
-print(binary_search([1,2,3,4,5], 3))
+values = random.sample(range(20, 40), 6)
+values = sorted(values) # sort the values
+print(f"List is {values}")
+user_input = int(input("Enter value to search : "))
+result = binary_search(values, user_input)
+if result != -1:
+    print(f"Item {values[result]} found at index {result}")
+else:
+    print("Not found")
